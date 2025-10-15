@@ -46,8 +46,9 @@ app.post('/api/generate', async (req, res) => {
       ],
       model: "openai/gpt-oss-20b:fireworks-ai",
   }).then((response) => {
+    console.log("Response: ", response);
     const {choices}= response
-      console.log(choices[0].message.content);
+      // console.log(choices[0].message.content);
       let resumeText = choices[0].message.content
     let suggestions = ''
     const splitMarker = /suggestions?/i
