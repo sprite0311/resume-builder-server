@@ -14,6 +14,9 @@ const HF_KEY = process.env.HF_API_KEY
 if (!HF_KEY) {
   console.warn('No HF_API_KEY found in environment. Set HF_API_KEY in .env')
 }
+app.get('/', (req, res) => {
+  res.send('Hello from CV Genie backend!')
+})
 app.get('/api/get', (req, res) => {
   console.log("Hello World")
 })
